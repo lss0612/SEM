@@ -1,0 +1,181 @@
+\documentclass[12pt]{report}   	
+\usepackage{geometry}                	
+\geometry{letterpaper}                   			
+\usepackage{graphicx}				
+\usepackage{setspace}
+\doublespace
+\usepackage{indentfirst}									
+\usepackage{amssymb}
+\usepackage{lscape}
+
+
+\title{Seeing the Unseen: Finding the Shadow Economy using the MIMIC Approach}
+\author{Les Stanaland}
+\date{24 April 2018}
+
+\begin{document}
+\maketitle
+
+\section*{Introduction and Research Question}
+
+The shadow, or underground, economy confounds the policymaker because its effects on the legitimate economy, from which we get key statistics like GDP, are unseen. The difficulty for the researcher therefore is to find a way to measure the unseen shadow economy so that when domestic economic decisions are made, a fuller accounting of the effects can be predicted. Schneider and Enste (2000) find nine such approaches; this paper will use one of those nine, the Multiple Indicators and Multiple Causes, or MIMIC, approach. 
+
+The fact that many economic transaction occur without the knowledge of government authorities is obvious, yet anecdotal. How can one measure something that cannot be seen? What effect does a barter transaction have on the broader economy when one cleans the pool of a neighbor in return for dental services?\footnote{True story. I have friends who did this for many years. Their kids all have healthy teeth.} The individual effect is probably not much. But what if people across the country do similar things? What goods and services are being produced in an economy, but without any official accounting, such as a tax payment or receipt? 
+
+Once realizing these types of transactions are in fact commonplace, the question then becomes acute: What are the measurable factors that can be used to approximate the shadow economy, and what effect does it have on the measurable economy? This paper attempts to answer these questions. 
+
+\section*{Literature Review and Theory}
+
+Shadow economies have different effects throughout the world, and are quite possibly becoming a larger part of the overall economy (Schneider and Enste 2000). Factors such as regulatory environment, tax structure, unemployment, and size of government (Wiseman 2013) can all affect the shadow economy. As these are types of policies that be enacted by legislatures, the policy importance of the shadow economy is clear.
+
+Especially in democracies, unhappiness with government decisions can be demonstrated by the "voice option" and the ``exit option'' (Hirschman 1970); policymakers would naturally prefer the former to the latter; however, the shadow economy is evidence of the latter. Reasons for people ``exiting'' the formal economy for the hidden pastures of the informal economy can be both benign and malevolent; one person may seek simply to supplement their income, while another seeks to hide illegally gotten gains from the tax authorities. Therefore, the theoretical basis of the shadow economy comes from psychology and rational choice, indicating that it is quite difficult to measure such a concept. Mogensen, et al (1995) gets at this difficulty when they label the shadow economy's development as ``the 'principle of running water': it adjusts to changes in taxes, to sanctions from the tax authorities and to general moral attitudes''.
+
+Harder still to disaggregate are the effects of the shadow economy: is it a net negative on the economy or a net positive? On April 17, 2018, the United States Supreme Court heard oral argument on a case that sits at the heart of the shadow economy, \textit{South Dakota v. Wayfair}. The case revolves around a 25-year-old ruling regarding the states' authority to collect sales taxes on sales where one party (buyer or seller) does business in another state. In the 1992 case, the Court ruled that the authority to tax required a ``physical nexus'' in the tax-issuing state.\footnote{\textit{Quill Corp. v. North Dakota}, 504 U.S. 298 (1992)} 25 years later, e-commerce has become a larger percentage of economic transactions, and South Dakota argued that they are missing out on a large stream of revenue, as South Dakotans are shopping online and are therefore not paying taxes on their purchases. This is an example of the shadow economy: completely legal transactions that are nonetheless outside the scope of the authorities to tax. 
+
+However, another example of the shadow economy is the various manners in which illegal activities can occur: gambling, prostitution, and other illegal activities that involve economic activity. Mirus and Smith (1997) gives a taxonomy of this main break between legal and illegal activities, and Schneider and Enste (2000) write of this taxonomy in that it captures ``all economic activity that would generally be taxable were they reported to the tax authorities''. 
+
+
+\section*{Variable Choice and Description}
+
+How do we measure and operationalize it then? Many options exist, and Schneider and Enste's 2000 classic contribution aids us tremendously in fully understanding the scope of the problem. Using Wiseman (2013) as a starting point, I will build a preliminary model of the shadow economy and see what effects two classical economic variables have on it: unemployment and real per capita GDP.
+
+This study will look only at the effects from the ``legal'' side of the shadow economy. I will leave illegal activities to further work. To do this, I build a one factor structural model in which the latent, unobserved variable is the shadow economy. The indicators, following Wiseman's 2013 look at the 50 US states, are: labor force participation rate and electricity usage. This last variable is especially common in the literature as it potentially demonstrates a gap between the formal economy and the shadow; regardless of activity, it will probably require electricity, so any difference between the expected value of electricity usage given a particular GDP level could be ascribed to the shadow economy. He also uses real per capita GDP, but I prefer to use that as a causal variable, not an indicator. 
+
+My hypotheses of the shadow economy is that tax rates will have an additive effect; higher income tax rates will cause the shadow economy to grow, while goods and services taxes will have a negative correlation with the shadow economy. Lastly, corporate taxes may also effect the shadow economy; higher rates there may force companies to do more work ``off the books'' and hence increase the size of the shadow economy. 
+
+To test this hypothesis, I use data gathered from 30 OECD countries for years 1995 to 2015. For this analysis, I used only OECD advanced countries because I wanted to look strictly at the \textit{economic} causes of the shadow economy. Clearly many government side variables exist; regulatory environment, freedom, and autocracy vs. democracy are but a few. I use OECD countries to largely control for the governmental differences; the countries in the dataset are all relatively advanced countries with healthy forms of government and regulation. This way, my results can be seen as unaffected by uncontrolled differences in government structure. 
+
+After modeling the indicator side of the equation, I will use my measure of the shadow economy to see how unemployment and real per capita GDP affect it. I hypothesize that as unemployment increases, the size of the shadow economy will increase, as people will need to look for alternate ways to make money. The shadow economy will also have, I believe, a \textit{positive} effect on real per capita GDP. Since the income approach to calculating GDP is the Keynesian model 
+
+\begin{equation}
+Y = C + I + G + NX
+\end{equation}
+
+where C is consumption, I is investment, G is government spending, and NX is net exports, we would expect money gained in the shadow economy would find its way into either I or C. Since government spending isn't largely affected by taxation revenue, an increase in disposable income brought about by activity in the shadow economy would cause a rise in overall GDP.
+
+The two-step process is therefore first a confirmatory factor analysis to create a measurement model of the latent variable Shadow Economy by using 5 observable measurements. Second, the causal model will look at the effects key economic variables have on the latent shadow economy measurement.
+
+\section*{Analysis}
+\subsection*{Measurement Model}
+
+The model for the shadow economy is comprised of 5 observable variables. They are: the corporate tax rate, the income tax rate, the goods and services tax rate (all as a percentage of total tax burden), the labor force participation rate, and the logged electricity usage in kWh per capita. According to theory and my hypothesis, we should see a positive relation for all variables except the goods and services taxes, given that these taxes are collected specifically in the formal sector of the economy. 
+
+Figure 1 shows the results of this model. All standardized coefficients are statistically significant at the .01 level; however, the signs are not as expected. Also, the model fit $\chi^2$ statistic is 63.68 with a p-value of 0.000 and an RMSEA of 0.138, so we can say here the model is not satisfactory. Given that the corporate tax coefficient is only .11, we can say that this variable does not explain the shadow economy well and should be dropped to improve model fit, both from a statistical and theoretical standpoint.
+
+Figure 2 shows the improved model. We still have 4 observed variables, so we have an adequate number of degrees of freedom to measure the fit. Now all signs are expected and the fit improves to a $\chi^2$ statistic of 11.39 and an RMSEA of 0.087, so the fit is better but still not quite satisfactory. One theoretical addition to improve model fit would be to add in a covariance between the income tax variable and the labor force participation rate. Theoretically, if the labor force participation rate goes up, then the income tax percentage ought to go up as well. Figure 3 shows the results of this model, and here the $\chi^2$ drops to 0.18 and the RMSEA goes to 0.000. However, the covariance addition only had an effect of .29, indicating the relationship may not have been as strong as suspected, even though it was significant at the .01 level.
+
+Given this model fit, Table 1 shows the standardized coefficients as the relative contribution and importance each of the four variables has on the shadow economy. 
+
+\subsection*{Robustness check}
+
+To check the model fit, I took two subsections of the data to check the findings as well as test another theory for the shadow economy; namely, what effect if any does a recession have? Figure 4 shows the model results from years 2003 to 2005, a period of expansion following the 2001 recession, and Figure 5 shows years 2009 to 2011, when the world was still recovering from the Great Recession. RMSEA figures are 0.000 for both, indicating the results weren't from random chance. We can also see a slight but nonetheless significant difference in the standardized coefficients; this could be evidence that the expansion following the Great Recession was perhaps different than others, and had a different effect on the shadow economy. The biggest difference in standardized coefficients came on the income tax variable; its effect went from .71 in the 2003-2005 model to .77 in the 2009-2011 model, so income tax rates may have led to an increase in the shadow economy as people sought to earn income without the tax liability attached. 
+
+\subsection*{Causal Model}
+
+With our measurement of the shadow economy in hand, we now seek to see what effects economic variables may have on it. This paper will only briefly analyze two predictor variables - unemployment rate and real per capita GDP. I do not expect this to be a good fitting model, but merely an attempt to perform the full model analysis. Figure 6 shows the standardized coefficients, and a $\chi^2$ of 877.827 clearly shows that the model fit is not adequate. 
+
+The coefficients however show that unemployment has a negative relationship, which is surprising considering theory would suggest they would be positively correlated. Also, the positive relationship between the real per capita GDP and the shadow economy suggests that economic transactions are good for GDP, regardless of where they occur. Given this finding, perhaps policymakers shouldn't worry about the shadow economy at all; that money made in the legal shadows is just as good and spends just as well as money made in the open economy.  
+
+
+\section*{Future Research, Limitations, and Conclusions}
+
+In the future, I expect to revisit this topic and improve upon my results in a few key areas: first, while I set up the data as time series in the statistical software, it didn't seem to make a difference in the analysis, so the time series component of the data is unmodeled. I will need to gain in methods training to appropriately account for this. Second, I will include more variables on both the measurement and causal side to get a fuller model.
+
+This research does show however, that after controlling for the regulatory and structural differences in governments through case selection, we saw a measurement of the shadow economy emerge after looking at income tax rates, goods and services tax rates, electricity usage, and the labor force participation rate. Policymakers therefore can look at these variables, two of which they directly control, to limit (or grow, one supposes) the shadow economy.
+
+\section*{Bibliography}
+
+Hirschman, Albert O. 1970. ``Exit, Voice, and Loyalty''. Harvard Univ. Press, Cambridge, MA.
+
+Mirus, Rolf and Roger S. Smith. 1997. ``Canada's underground economy: measurement and implications'', in \textit{The Underground Economy: Global Evidence of its Size and Impact}, Lippert and Walker, eds. Vancouver: Fraser Institute.
+
+Mogensen, Gunnar V., et. al. 1995. ``The shadow economy in Denmark 1994: Measurement and Results''. Rockwool Foundation Research; Copenhagen.
+
+\textit{Quill Corp. v. North Dakota}, 504 U.S. 298 (1992)
+
+\textit{South Dakota v. Wayfair}, 17-494, upcoming.
+
+Schneider, Friedrich and Dominik H. Enste. 2000. ``Shadow economies: size, causes, and consequences''. \textit{Journal of Economic Literature} 38: 77-114.
+
+Wiseman, Travis. 2013. ``US shadow economies: a state-level study''. \textit{Constitutional Political Economy} 24: 310-335.
+
+\section*{Appendix}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"SEM_1"}
+	\caption{Original Hypothesized Shadow Economy}
+	\label{fig:model-1}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"SEM_2"}
+	\caption{Shadow Economy without Corporate Tax}
+	\label{fig:model-2}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"SEM_3"}
+	\caption{Model with added covariance}
+	\label{fig:model-3}
+\end{figure}
+
+\begin{table}[htbp] \centering 
+  \caption{Indicators Model} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Latent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & Shadow Economy \\ 
+\hline \\[-1.8ex] 
+ Labor Force Participation Rate & .55$^{***}$ \\ 
+  & (0.046) \\ 
+  & \\ 
+ Income Tax Rate & .66$^{***}$ \\ 
+  & (0.044) \\ 
+  & \\ 
+ Goods and Services Tax Rate & $-$0.724$^{***}$ \\ 
+  & (0.044) \\ 
+  & \\ 
+ Electricity Usage, logged & 0.480$^{***}$ \\ 
+  & (0.040) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 620 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}  
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"SEM_4"}
+	\caption{Model 3 approach with subsetted data, 2003-2005}
+	\label{fig:model-4}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"SEM_5"}
+	\caption{Model 3 approach with subsetted data, 2009-2011}
+	\label{fig:model-5}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"SEM_6"}
+	\caption{Full Measurement and Causal Model}
+	\label{fig:model-6}
+\end{figure}
+ 
+\end{document}
+
+
+
