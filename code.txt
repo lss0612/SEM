@@ -1,0 +1,52 @@
+**EXPLANATORY VARIABLES MODEL**
+
+import delimited C:\Users\lss061000\Desktop\fulldata.csv
+(13 vars, 630 obs)
+
+sem (Shadow_Economy -> corporatetax, ) (Shadow_Economy -> lfpr, ) (Shadow_Economy -> leu, ) (Shadow_Economy -> incometax, ) (Shadow_Economy -> gstax, ), standardized latent(Shadow_Economy ) nocapslatent
+
+estat gof
+
+estat ic
+
+hist corporatetax
+
+hist incometax
+
+hist lfpr
+
+hist leu
+
+hist gstax
+
+estat gof, stats(rmsea)
+
+sem (Shadow_Economy -> lfpr, ) (Shadow_Economy -> leu, ) (Shadow_Economy -> incometax, ) (Shadow_Economy -> gstax, ), standardized latent(Shadow_Economy ) nocapslatent
+
+estat gof, stats(rmsea)
+
+sem (Shadow_Economy -> lfpr, ) (Shadow_Economy -> leu, ) (Shadow_Economy -> totalpersonaltax, ) (Shadow_Economy -> gstax, ) (Shadow_Economy -> incometax, ), standardized latent(Shadow_Economy ) cov( e.totalpersonaltax*e.incometax e.gstax*e.incometax)nocapslatent
+
+**MODEL WITH YEARS 2003-2005 ONLY**
+
+import excel "C:\Users\lss061000\Desktop\Book1.xlsx", sheet("Sample 1") firstrow
+
+sem (Shadow_Economy -> IncomeTax, ) (Shadow_Economy -> GSTax, ) (Shadow_Economy -> LEU, ) (Shadow_Economy -> LFPR, ), standardized latent(Shadow_Economy ) cov( e.IncomeTax*e.LFPR) nocapslatent
+
+estat gof, stats(rmsea)
+
+**MODEL WITH YEARS 2009-2011 ONLY**
+
+import excel "C:\Users\lss061000\Desktop\Book2.xlsx", sheet("Sheet1") firstrow
+
+sem (Shadow_Economy -> IncomeTax, ) (Shadow_Economy -> GSTax, ) (Shadow_Economy -> LEU, ) (Shadow_Economy -> LFPR, ), standardized latent(Shadow_Economy ) cov( e.IncomeTax*e.LFPR) nocapslatent
+
+estat gof, stats(rmsea)
+
+**FULL MODEL**
+
+import delimited C:\Users\lss061000\Desktop\fulldata.csv
+
+sem (Shadow_Economy -> incometax, ) (Shadow_Economy -> gstax, ) (Shadow_Economy -> leu, ) (Shadow_Economy -> lfpr, ) (Shadow_Economy -> unemployment, ) (Shadow_Economy -> rgdpcapita, ), standardized latent(Shadow_Economy ) nocapslatent
+
+estat gof, stats(all)
